@@ -1,0 +1,63 @@
+[
+    {
+      "id": 1,
+      "name": "Eleven",
+      "image": "https://66.media.tumblr.com/6039eb5fdd77acbd2b741038b595cb56/tumblr_oykkz6yQu41tf5kqco1_250.png"
+    },
+    {
+      "id": 2,
+      "name": "Mike Wheeler",
+      "image": "https://66.media.tumblr.com/1d51137c3f4ac7c4ad7cac41d0338ff2/tumblr_pu4isyaNqQ1s0v7b0o5_250.png"
+    },
+    {
+      "id": 3,
+      "name": "Jim Hopper",
+      "image": "https://66.media.tumblr.com/fdfef88cd0b54f343adc31ad2c5a6397/tumblr_pualoxxNYD1u2eo2uo7_250.png"
+    },
+    {
+      "id": 4,
+      "name": "Maxine 'Max' Mayfield",
+      "image": "https://66.media.tumblr.com/4a62f90a97937daf9269899f0c0d6a50/tumblr_pu5098UDuT1xmq33do6_250.png"
+    },
+    {
+      "id": 5,
+      "name": "Dustin Henderson",
+      "image": "https://66.media.tumblr.com/08cc3177846acd3c90b48689bda263d9/tumblr_pufy1jA1Qt1y5wxweo9_250.png"
+    },
+    {
+      "id": 6,
+      "name": "Lucas Sinclair",
+      "image": "https://66.media.tumblr.com/7814a25bd9fd6ae5985c727d2772e8ef/tumblr_ozli2gZT1d1wgp4lco1_250.jpg"
+    },
+    {
+      "id": 7,
+      "name": "Will Byers",
+      "image": "https://66.media.tumblr.com/936c3902bb9664821c72e877fb1951f1/tumblr_p3zt7jCCUF1tut8b4o4_250.png"
+    },
+    {
+      "id": 8,
+      "name": "Steve Harrington",
+      "image": "https://i.pinimg.com/736x/3b/84/5b/3b845bbcd5d179210859fda4e1db81a4--joe-keery-hot-stranger-things-steve.jpg"
+    },
+    {
+      "id": 9,
+      "name": "Jonathan Byers",
+      "image" : "https://66.media.tumblr.com/6c8909f861d569414fbe1895adf1c3ab/tumblr_oyp3njLrc21uflmebo7_250.png"
+    },
+    {
+      "id": 10,
+      "name": "Nancy Wheeler",
+      "image": "https://66.media.tumblr.com/cc70c19c3da8e94ddfad3842d13c9378/tumblr_oykkz6yQu41tf5kqco7_250.png"
+    },
+    {
+      "id": 11,
+      "name": "Billy Hargrove",
+      "image": "https://66.media.tumblr.com/5b3c1aeb014c674a94df0079d85a011e/tumblr_p01txiGbJm1vrpaero2_250.jpg"
+    },
+    {
+      "id": 12,
+      "name": "Joyce Byers",
+      "image": "https://66.media.tumblr.com/3167ac9f0e489216d1bf56dd87b87abc/tumblr_pu70bfX3VF1s0v7b0o6_250.png"
+    }
+  ]
+  

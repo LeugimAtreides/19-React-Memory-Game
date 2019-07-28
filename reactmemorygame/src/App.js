@@ -1,26 +1,34 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from "react";
+import MemoryCard from "./components/MemoryCard";
+import Wrapper from "./components/Wrapper";
+import Title from "./components/Title";
+import characters from "./characters.json";
+import FriendCard from "./components/MemoryCard";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends Component {
+
+  // Setting this.state.characters to the characters array
+  state = {
+    characters
+  };
+
+  // Map over the characters array and create a new memory card for each of them
+  render() {
+    return (
+      <Wrapper>
+        <Title>
+          Stranger Things 3 Memory Game
+        </Title>
+        {this.state.characters.map(character =>(
+                  <FriendCard
+                  id={characters.id}
+                  key={characters.id}
+                  image={characters.id}
+                />
+        ))}
+      </Wrapper>
+    )
+  }
 }
 
 export default App;
