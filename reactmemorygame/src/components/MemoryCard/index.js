@@ -1,17 +1,12 @@
 import React from "react";
 import "./style.css";
 
-function FriendCard(props) {
+function MemoryCard(props) {
   return (
-    <div className="card">
-      <div className="img-container">
-        <img alt={props.name} src={props.image} />
-      </div>
-      <span onClick={() => props.removeFriend(props.id)} className="remove">
-        𝘅
-      </span>
+    <div onClick={() => props.chooseCharacter(props.id)} className="card">
+      <img alt={props.name} src={props.image} />
     </div>
   );
 }
 
-export default FriendCard;
+export default MemoryCard;

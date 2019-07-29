@@ -1,9 +1,9 @@
 .title {
     width: 100%;
-    text-align: center;
+    text-align: left;
     font-size: 3rem;
     text-decoration: underline;
-    color: hsl(358, 94, 43);
+    color: rgb(214,6,11);
     margin-bottom: 50px;
   }
   
