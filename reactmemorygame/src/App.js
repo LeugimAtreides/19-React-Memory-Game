@@ -14,7 +14,7 @@ class App extends Component {
   state = {
     characters,
     count: 0,
-    chosen: []
+    available: []
   };
 
   shuffle = characters => {
@@ -33,32 +33,44 @@ class App extends Component {
       characters
     })
   }
-  chooseCharacter = (id, event) => {
 
-    event.preventDefault();
+  empty = () => {
 
-    if (this.state.chosen.some(character => character.id) === id) {
+    const available = this.state.available.filter(character => character.id > 0)
+
+    this.setState({
+      available
+    })
+  
+  }
+  chooseCharacter = id => {
+
+    // event.preventDefault();
+
+    if (this.state.available.length > 0 && this.state.available.some(character => character.id) === id) {
+      console.log("first conditional works")
       this.setState({
         characters,
         count: 0,
-        chosen: []
       });
 
-      this.shuffle(this.state.characters)
-      
-    } else {
+      this.empty();
 
+      this.shuffle(this.state.characters);
+      
+    } else if (this.state.available.length < 1 || this.state.available.some(character => character.id) !== id) {
+      console.log("second conditional works")
       this.handleScoreChange();
 
-      const chosen = this.state.characters.filter(character => character.id === id);
+      const available = this.state.characters.filter(character => character.id !== id);
 
-      this.setState({ chosen })
+      this.setState({ available })
 
       this.shuffle(this.state.characters)
 
     }
-
   }
+
 
   handleScoreChange = event => {
 
@@ -68,26 +80,26 @@ class App extends Component {
   // Map over the characters array and create a new memory card for each of them
   render() {
     return (
-      <Wrapper>
         <Container>
           <Row>
-            <Col>
+            <Col lg>
               <Title>
                 Stranger Things 3 Memory Game
               </Title>
             </Col>
-            <Col>
-              <Counter 
-              count={this.state.count} 
-              onClick = {this.handleScoreChange} 
+            <Col sm>
+              <Counter
+               count = {this.state.count}
               />
             </Col>
           </Row>
           <Row>
             <Col>
+              <Wrapper>
               {
                 this.state.characters.map(character => (
                   <MemoryCard
+                    chooseCharacter={this.chooseCharacter}
                     id={character.id}
                     key={character.id}
                     image={character.image}
@@ -95,10 +107,10 @@ class App extends Component {
                   />
                 ))
               }
+              </Wrapper>
             </Col>
           </Row>
         </Container>
-      </Wrapper>
     )
   }
 }

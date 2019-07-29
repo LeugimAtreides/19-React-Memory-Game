@@ -11,8 +11,6 @@
 
 }
 
-
-
 * {
     box-sizing: border-box;
     font-family: 'benguiatbold', Times, serif;
@@ -22,5 +20,10 @@
     padding: 0;
     margin: 0;
     height: 100%;
+
+    background-image: url("http://hdqwalls.com/wallpapers/stranger-things-season-3-2019-ni.jpg");
+    background-position-y: -6rem;
+    background-repeat: no-repeat;
+    background-size: cover;
   }
   
