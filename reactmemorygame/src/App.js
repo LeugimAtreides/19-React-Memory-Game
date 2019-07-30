@@ -46,9 +46,11 @@ class App extends Component {
   chooseCharacter = id => {
 
     // event.preventDefault();
-
-    if (this.state.available.length > 0 && this.state.available.some(character => character.id) === id) {
-      console.log("first conditional works")
+    console.log(this.state.available.some(character => character.id !== id), "no item in the array matches the id passed in")
+    console.log(this.state.available.some(character => character.id === id), "an item in the array matches the id passed in")
+    if (this.state.available.length > 0 && this.state.available.some(character => character.id === id) === false) {
+      console.log("first conditional works");
+      console.log(this.state.available);
       this.setState({
         characters,
         count: 0,
@@ -58,9 +60,10 @@ class App extends Component {
 
       this.shuffle(this.state.characters);
       
-    } else if (this.state.available.length < 1 || this.state.available.some(character => character.id) !== id) {
+    } else if (this.state.available.length < 1 || this.state.available.some(character => character.id === id) === true) {
       console.log("second conditional works")
       this.handleScoreChange();
+      console.log(this.state.available)
 
       const available = this.state.characters.filter(character => character.id !== id);
 
@@ -68,6 +71,8 @@ class App extends Component {
 
       this.shuffle(this.state.characters)
 
+    } else {
+      console.log("nothing is working")
     }
   }
 
@@ -82,12 +87,12 @@ class App extends Component {
     return (
         <Container>
           <Row>
-            <Col lg>
+            <Col xs={12}>
               <Title>
                 Stranger Things 3 Memory Game
               </Title>
             </Col>
-            <Col sm>
+            <Col xs={12} className="text-center">
               <Counter
                count = {this.state.count}
               />

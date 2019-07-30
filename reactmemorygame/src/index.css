@@ -22,8 +22,11 @@
     height: 100%;
 
     background-image: url("http://hdqwalls.com/wallpapers/stranger-things-season-3-2019-ni.jpg");
-    background-position-y: -6rem;
+    background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+
+
+    overflow: auto;
   }
   

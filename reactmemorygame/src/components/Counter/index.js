@@ -1,16 +1,13 @@
 import React from "react";
-import Card from "react-bootstrap/Card"
+import "../Counter/style.css";
+import Badge from "react-bootstrap/Badge";
 
 // By extending the React.Component class, Counter inherits functionality from it
 function Counter(props) {
 
   // Here we return the dummy component
   return (
-    <Card style={{ height:'3rem', width:'12rem' }}>
-      <Card.Body>
-        <Card.Text>Score: {props.count}</Card.Text>
-      </Card.Body>
-    </Card>
+    <h1><Badge variant="danger">Score: {props.count}</Badge></h1>
   );
 }
 
