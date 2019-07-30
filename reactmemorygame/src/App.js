@@ -34,45 +34,64 @@ class App extends Component {
     })
   }
 
-  empty = () => {
+  empty = id => {
 
-    const available = this.state.available.filter(character => character.id > 0)
+    const available = this.state.available.filter(character => character.id === id)
 
     this.setState({
       available
     })
+
+    console.log(available)
   
   }
   chooseCharacter = id => {
-
+    console.log(id)
     // event.preventDefault();
-    console.log(this.state.available.some(character => character.id !== id), "no item in the array matches the id passed in")
-    console.log(this.state.available.some(character => character.id === id), "an item in the array matches the id passed in")
+    console.log(this.state.available.filter(character => character.id !== id), "no item in the array matches the id passed in")
+    console.log(this.state.available.filter(character => character.id === id), "an item in the array matches the id passed in")
+    
     if (this.state.available.length > 0 && this.state.available.some(character => character.id === id) === false) {
       console.log("first conditional works");
       console.log(this.state.available);
+      
       this.setState({
         characters,
-        count: 0,
+        count: 0
       });
 
-      this.empty();
+      this.empty(id);
 
       this.shuffle(this.state.characters);
       
-    } else if (this.state.available.length < 1 || this.state.available.some(character => character.id === id) === true) {
+    } else if (this.state.available.length < 1) {
       console.log("second conditional works")
       this.handleScoreChange();
-      console.log(this.state.available)
+      // console.log(this.state.available)
 
       const available = this.state.characters.filter(character => character.id !== id);
 
       this.setState({ available })
 
+      console.log(available);
+
       this.shuffle(this.state.characters)
 
-    } else {
-      console.log("nothing is working")
+    } else if (this.state.available.some(character => character.id === id) === true) {
+      
+      console.log("third conditional works")
+
+      this.handleScoreChange();
+      // console.log(this.state.available)
+
+      const available = this.state.available.filter(character => character.id !== id);
+
+      this.setState({ available })
+
+      console.log(available);
+
+      this.shuffle(this.state.characters)
+
     }
   }
 
