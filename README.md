@@ -8,7 +8,7 @@ This Memory match game is based on the show Stranger Things on Netflix. When the
 
 # Technologies Used
 <br>
-The main purpose of this game is to train in the use of components by react. There is no back-end part of the application. I used Bootstrap as a the CSS framework. The app was deployed using Heroku.
+The main purpose of this game is to train in the use of components by react. There is no back-end part of the application. I used Bootstrap as a the CSS framework. The app was deployed using GitHub Pages.
 
 # Front Page
 <br>
