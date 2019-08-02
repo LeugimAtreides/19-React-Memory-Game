@@ -10,7 +10,7 @@
     "react-dom": "^16.8.6",
     "react-scripts": "3.0.1"
   },
-  "homepage": "https://github.com/LeugimAtreides/19-React-Memory-Game.git",
+  "homepage": "https://leugimatreides.github.io/19-React-Memory-Game/",
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
